@@ -34,7 +34,7 @@ import java.util.*;
 
 public class MapsActivity extends FragmentActivity {
 
-    private GoogleMap mMap; // Might be null if Google Play services APK is not available.
+    private GoogleMap mMap;
     private boolean moreThanOne = false;
     public LatLng prev = new LatLng(0, 0);
     public int DEFAULT_ZOOM_LEVEL = 14;
