@@ -7,6 +7,8 @@ import android.os.Handler;
 import android.os.StrictMode;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -32,7 +34,7 @@ import org.json.JSONObject;
 
 import java.util.*;
 
-public class MapsActivity extends FragmentActivity {
+public class MapsActivity extends ActionBarActivity {
 
     private GoogleMap mMap;
     private boolean moreThanOne = false;
@@ -40,11 +42,14 @@ public class MapsActivity extends FragmentActivity {
     public int DEFAULT_ZOOM_LEVEL = 14;
     private Marker marker;
     Context context;
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
         setContentView(R.layout.activity_maps);
+        toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
         setUpMapIfNeeded();
     }
 
@@ -53,7 +58,10 @@ public class MapsActivity extends FragmentActivity {
         super.onResume();
         setUpMapIfNeeded();
     }
-
+    @Override
+    protected void onStop(){
+        super.onStop();
+    }
     /**
      * Sets up the map if it is possible to do so (i.e., the Google Play services APK is correctly
      * installed) and the map has not already been instantiated.. This will ensure that we only ever
