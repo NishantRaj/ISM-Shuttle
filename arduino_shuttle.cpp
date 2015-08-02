@@ -1,4 +1,3 @@
-//compatible with arduino compiler
 /*
 ===================================================
 Name :- Nishant Raj
@@ -7,7 +6,7 @@ College :- Indian School of Mines
 Branch :- Computer Science and Engineering
 Time :- 03 August 2015 (Monday) 02:00
 ===================================================*/
-/*Following given code work for Arduino UNO with GSM900 and GPS bee module*/
+/*Following given code work for Arduino UNO with GSM900 and GPS bee module and code was compiled in arduino 1.6.1*/
 #include <SoftwareSerial.h>
 SoftwareSerial gprsSerial(2, 3);
 int Gpsdata;                                    // for incoming serial data 
