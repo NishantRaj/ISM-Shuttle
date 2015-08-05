@@ -130,7 +130,7 @@ public class MapsActivity extends ActionBarActivity {
             HttpConnectionParams.setConnectionTimeout(httpParams, TIMEOUT_MILLISEC);
             HttpConnectionParams.setSoTimeout(httpParams, TIMEOUT_MILLISEC);
             httpclient = new DefaultHttpClient(httpParams);
-            url = new String("http://shuttletracker.hostei.com/?latest=1");
+            url = new String("http://shuttletracker.hostei.com/?bus=1&latest=1");
             //Toast.makeText(m, "abc", Toast.LENGTH_LONG).show();
         }
         @Override
