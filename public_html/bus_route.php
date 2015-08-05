@@ -1,12 +1,12 @@
 <?php
 include "connect_database.php";
-$table_name = "bus_route_1";
+$table_name_prefix = "bus_route_";
 
 $obj = new Connect_database();
 $conn = $obj->connect_db();
-$bus_number = 0;
+$table_name = "";
 if (array_key_exists("bus", $_GET)){
-	$bus_number = (int)$_GET['bus'];
+	$table_name = $table_name_prefix . $_GET['bus'];
 }
 
 if ($bus_number == 1){
