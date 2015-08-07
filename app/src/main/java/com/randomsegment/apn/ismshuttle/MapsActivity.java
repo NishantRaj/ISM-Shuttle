@@ -40,7 +40,7 @@ public class MapsActivity extends ActionBarActivity {
     private GoogleMap mMap;
     private boolean moreThanOne = false;
     public LatLng prev = new LatLng(0, 0);
-    public int DEFAULT_ZOOM_LEVEL = 14;
+    public int DEFAULT_ZOOM_LEVEL = 18;
     private Marker marker;
     Context context;
     private Toolbar toolbar;
@@ -130,7 +130,7 @@ public class MapsActivity extends ActionBarActivity {
             HttpConnectionParams.setConnectionTimeout(httpParams, TIMEOUT_MILLISEC);
             HttpConnectionParams.setSoTimeout(httpParams, TIMEOUT_MILLISEC);
             httpclient = new DefaultHttpClient(httpParams);
-            url = new String("http://shuttletracker.hostei.com/?latest=1");
+            url = new String("http://shuttletracker.hostei.com/?bus=1&latest=1");
             //Toast.makeText(m, "abc", Toast.LENGTH_LONG).show();
         }
         @Override
@@ -217,7 +217,7 @@ public class MapsActivity extends ActionBarActivity {
                 });
             }
         };
-        timer.schedule(doAsynchronousTask, 0, 5000); //execute in every 5000 ms
+        timer.schedule(doAsynchronousTask, 0, 2000); //execute in every 2000 ms
     }
 }
 
