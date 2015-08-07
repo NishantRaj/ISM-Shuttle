@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Directions from National Highway 32, CMPF Colony, Dhanbad, Jharkhand 826001, India to Dhirendrapuram Colony Road, Chanchani Colony, Dhanbad, Jharkhand 826004, India</name>
+		<Placemark>
+			<name>Directions from National Highway 32, CMPF Colony, Dhanbad, Jharkhand 826001, India to Dhirendrapuram Colony Road, Chanchani Colony, Dhanbad, Jharkhand 826004, India</name>
+			<styleUrl>#line-1267FF-5-nodesc</styleUrl>
+			<ExtendedData>
+			</ExtendedData>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>86.4426,23.80919,0.0 86.44253,23.80941,0.0 86.44246,23.809850000000004,0.0 86.44241,23.81079,0.0 86.44238,23.81122,0.0 86.44237,23.81125,0.0 86.44328,23.81184,0.0 86.44339,23.8119,0.0 86.44348,23.81192,0.0 86.44355,23.81316,0.0 86.444,23.81313,0.0 86.44474,23.8131,0.0 86.44588,23.81309,0.0 86.44641,23.81309,0.0 86.44645,23.81326,0.0 86.44655,23.81381,0.0 86.44665,23.81428,0.0 86.4458,23.81432,0.0 86.44517,23.81435,0.0 86.44457,23.81438,0.0 86.44399,23.81444,0.0 86.44355,23.81446,0.0 86.44347,23.81447,0.0 86.44349,23.8147,0.0 86.44343,23.81471,0.0 86.44318,23.81474,0.0 86.44299,23.81475,0.0 86.44284,23.81474,0.0 86.44268,23.81473,0.0 86.44243,23.81471,0.0 86.44207,23.81468,0.0 86.44203,23.81471,0.0 86.44201,23.81475,0.0 86.44199,23.8148,0.0 86.44199,23.81491,0.0 86.44198,23.81524,0.0 86.44198,23.81528,0.0 86.44198,23.8153,0.0 86.44196,23.81532,0.0 86.44193,23.81533,0.0 86.44191,23.81533,0.0 86.44189,23.81533,0.0 86.44185,23.81533,0.0 86.44051,23.81526,0.0 86.44046,23.81526,0.0 86.44048,23.81521,0.0 86.44052,23.81511,0.0 86.44054,23.81498,0.0 86.44054,23.814660000000003,0.0 86.44054,23.81449,0.0 86.44052,23.81445,0.0 86.44051,23.81443,0.0 86.4405,23.81443,0.0 86.43955,23.81448,0.0 86.43954,23.81428,0.0 86.43945,23.81416,0.0 86.43943,23.81413,0.0 86.43943,23.81411,0.0 86.43942,23.81409,0.0 86.43942,23.81407,0.0 86.43942,23.81405,0.0 86.43943,23.81403,0.0 86.43944,23.814010000000003,0.0 86.43945,23.81399,0.0 86.43946,23.81397,0.0 86.43948,23.81394,0.0 86.43951,23.81391,0.0 86.43954,23.813880000000005,0.0 86.43952,23.813860000000002,0.0 86.43951,23.81383,0.0 86.4395,23.8138,0.0 86.4395,23.813770000000005,0.0 86.4395,23.81375,0.0 86.43951,23.81372,0.0 86.43952,23.81369,0.0 86.43954,23.81365,0.0 86.43968,23.8135,0.0 86.43972,23.81345,0.0 86.43994,23.81315,0.0 86.44,23.81308,0.0 86.43978,23.81272,0.0 86.43932,23.81198,0.0 86.43926,23.81203,0.0 86.4391,23.81216,0.0 86.43898,23.81227,0.0 86.43888,23.81242,0.0 86.43881,23.81259,0.0 86.43875,23.81272,0.0 86.43870000000001,23.81285,0.0 86.43866,23.81301,0.0 86.43865,23.81332,0.0 86.43918,23.81413,0.0 86.43974,23.81506,0.0 86.4398,23.81523,0.0 86.43983,23.81533,0.0 86.43986,23.815440000000002,0.0 86.43986,23.81553,0.0 86.43986,23.81561,0.0 86.43986,23.81577,0.0 86.43984,23.81627,0.0 86.43982,23.81644,0.0 86.43984,23.81663,0.0 86.43966,23.81676,0.0 86.43902,23.81722,0.0 86.43859,23.81753,0.0 86.43824,23.81776,0.0 86.43777,23.81807,0.0 86.43751,23.81824,0.0 86.43738,23.81833,0.0 86.43699,23.81862,0.0 86.43632,23.8191,0.0 86.43582,23.81951,0.0 86.435,23.82017,0.0</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>National Highway 32, CMPF Colony, Dhanbad, Jharkhand 826001, India</name>
+			<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+			<ExtendedData>
+			</ExtendedData>
+			<Point>
+				<coordinates>86.4425959,23.8091916,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ISM, ISM Dhanbad Internal Road, Sardar Patel Nagar, Dhanbad, Jharkhand 826004, India</name>
+			<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+			<ExtendedData>
+			</ExtendedData>
+			<Point>
+				<coordinates>86.4435548,23.8144622,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ISM, ISM Dhanbad Internal Road, Sardar Patel Nagar, Dhanbad, Jharkhand 826004, India</name>
+			<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+			<ExtendedData>
+			</ExtendedData>
+			<Point>
+				<coordinates>86.4405132,23.8152604,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Sardar Patel Nagar, Dhanbad, Jharkhand, India</name>
+			<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+			<ExtendedData>
+			</ExtendedData>
+			<Point>
+				<coordinates>86.4393227,23.8119822,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Dhaiya, Dhanbad, Jharkhand, India</name>
+			<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+			<ExtendedData>
+			</ExtendedData>
+			<Point>
+				<coordinates>86.4375076,23.8182441,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Dhirendrapuram Colony Road, Chanchani Colony, Dhanbad, Jharkhand 826004, India</name>
+			<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+			<ExtendedData>
+			</ExtendedData>
+			<Point>
+				<coordinates>86.4349976,23.8201665,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Style id='icon-503-DB4436-nodesc-normal'>
+			<IconStyle>
+				<color>ff3644DB</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-503-DB4436-nodesc-highlight'>
+			<IconStyle>
+				<color>ff3644DB</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-503-DB4436-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-503-DB4436-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-503-DB4436-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='line-1267FF-5-nodesc-normal'>
+			<LineStyle>
+				<color>ffFF6712</color>
+				<width>5</width>
+			</LineStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='line-1267FF-5-nodesc-highlight'>
+			<LineStyle>
+				<color>ffFF6712</color>
+				<width>8.0</width>
+			</LineStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='line-1267FF-5-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#line-1267FF-5-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#line-1267FF-5-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>
