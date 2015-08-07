@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.StrictMode;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -109,7 +108,7 @@ public class MapsActivity extends ActionBarActivity {
 
     private void createKML(Context context) {
         try {
-            KmlLayer routeLayer = new KmlLayer(findMap(), R.raw.route, context);
+            KmlLayer routeLayer = new KmlLayer(findMap(), R.raw.route1, context);
             routeLayer.addLayerToMap();
         }
         catch (Exception e) {
