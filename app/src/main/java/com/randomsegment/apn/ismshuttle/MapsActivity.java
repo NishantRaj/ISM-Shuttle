@@ -18,6 +18,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.maps.android.kml.KmlLayer;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
@@ -58,8 +59,9 @@ public class MapsActivity extends ActionBarActivity {
                 (NavigationDrawerFragment)getSupportFragmentManager()
                         .findFragmentById(R.id.fragment_navigation_drawer);
 
-        navigationDrawerFragment.setUp(R.id.fragment_navigation_drawer,(DrawerLayout)findViewById(R.id.drawer_layout),toolbar);
+        navigationDrawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
 
+        createKML(context);
         setUpMapIfNeeded();
     }
 
@@ -98,6 +100,26 @@ public class MapsActivity extends ActionBarActivity {
                 onMapReady();
             }
         }
+    }
+
+    /**
+     * To Add a KML Layer to Map
+     * createKML() and findMap()
+     */
+
+    private void createKML(Context context) {
+        try {
+            KmlLayer routeLayer = new KmlLayer(findMap(), R.raw.route, context);
+            routeLayer.addLayerToMap();
+        }
+        catch (Exception e) {
+            // Something
+        }
+    }
+
+    private GoogleMap findMap() {
+        return ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
+                .getMap();
     }
 
     /**
