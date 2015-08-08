@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -36,7 +37,6 @@ import org.json.JSONObject;
 import java.util.*;
 
 public class MapsActivity extends ActionBarActivity {
-
     private GoogleMap mMap;
     private boolean moreThanOne = false;
     public LatLng prev = new LatLng(0, 0);
@@ -73,6 +73,17 @@ public class MapsActivity extends ActionBarActivity {
     protected void onStop(){
         super.onStop();
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
     /**
      * Sets up the map if it is possible to do so (i.e., the Google Play services APK is correctly
      * installed) and the map has not already been instantiated.. This will ensure that we only ever
@@ -216,7 +227,7 @@ public class MapsActivity extends ActionBarActivity {
     public void onMapReady() {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-
+        showISMLocation();
         callAsynchronousTask();
     }
     public void callAsynchronousTask() {
@@ -239,6 +250,15 @@ public class MapsActivity extends ActionBarActivity {
             }
         };
         timer.schedule(doAsynchronousTask, 0, 2000); //execute in every 2000 ms
+    }
+    private void showISMLocation(){
+        // ISM Location
+        LatLng currentPosition = new LatLng(23.8143681,86.4412045);
+        CameraUpdate center=
+                CameraUpdateFactory.newLatLng(new LatLng(23.8143681,86.4412045));
+        CameraUpdate zoom=CameraUpdateFactory.zoomTo(14);
+        mMap.moveCamera(center);
+        mMap.animateCamera(zoom);
     }
 }
 
