@@ -1,8 +1,13 @@
 <?php
 include "connect_database.php";
-$table_name = "bus_pos_1";
+$table_name_prefix = "bus_pos_";
 $obj = new Connect_database();
 $conn = $obj->connect_db();
+
+$table_name = $table_name_prefix;
+if (key_exists('bus', $_GET)){
+	$table_name = $table_name_prefix . $_GET['bus'];
+}
 
 if (count($_GET)){
 	if ($_GET['latest'] == null){

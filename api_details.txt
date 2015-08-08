@@ -1,0 +1,12 @@
+base url : http://shuttletracker.hostei.com
+latest coordinates of bus no. 'k'
+	http://shuttletracker.hostei.com/?latest=<k>
+
+push new coordinates for bus 'k'
+	http://shuttletracker.hostei.com/?bus=<k>&lat=<latitude>&long=<longitude>&speed=<speed>
+
+complete bus route information of bus 'k'
+	http://shuttletracker.hostei.com/bus_route.php?bus=<k>
+
+check for bus route updates of bus 'k'
+	http://shuttletracker.hostei.com/bus_route_update.php?bus=<k>
