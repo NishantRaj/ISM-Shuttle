@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
     <include
         android:id="@+id/app_bar"
         layout="@layout/app_bar" />
@@ -31,7 +32,7 @@
         <fragment
             android:id="@+id/fragment_navigation_drawer"
             android:name="com.randomsegment.apn.ismshuttle.NavigationDrawerFragment"
-            android:layout_width="280dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             app:layout="@layout/fragment_navigation_drawer"

@@ -39,11 +39,13 @@ public class MapsActivity extends ActionBarActivity {
 
     private GoogleMap mMap;
     private boolean moreThanOne = false;
-    public LatLng prev = new LatLng(0, 0);
-    public int DEFAULT_ZOOM_LEVEL = 18;
+    public LatLng prev = new LatLng(0,0);
+    public LatLng ism = new LatLng(23.815717,86.441069);
+    public int DEFAULT_ZOOM_LEVEL = 15;
     private Marker marker;
     Context context;
     private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,16 +53,13 @@ public class MapsActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main_appbar);
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         NavigationDrawerFragment navigationDrawerFragment =
                 (NavigationDrawerFragment)getSupportFragmentManager()
                         .findFragmentById(R.id.fragment_navigation_drawer);
 
         navigationDrawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
-
-        createKML(context);
+        createlayer(context);
         setUpMapIfNeeded();
     }
 
@@ -106,7 +105,7 @@ public class MapsActivity extends ActionBarActivity {
      * createKML() and findMap()
      */
 
-    private void createKML(Context context) {
+    private void createlayer(Context context) {
         try {
             KmlLayer routeLayer = new KmlLayer(findMap(), R.raw.route1, context);
             routeLayer.addLayerToMap();
@@ -214,6 +213,8 @@ public class MapsActivity extends ActionBarActivity {
     }
     //@Override
     public void onMapReady() {
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ism, DEFAULT_ZOOM_LEVEL));
+
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
