@@ -227,7 +227,7 @@ public class MapsActivity extends ActionBarActivity {
     public void onMapReady() {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        showISMLocation();
+        
         callAsynchronousTask();
     }
     public void callAsynchronousTask() {
@@ -251,14 +251,6 @@ public class MapsActivity extends ActionBarActivity {
         };
         timer.schedule(doAsynchronousTask, 0, 2000); //execute in every 2000 ms
     }
-    private void showISMLocation(){
-        // ISM Location
-        LatLng currentPosition = new LatLng(23.8143681,86.4412045);
-        CameraUpdate center=
-                CameraUpdateFactory.newLatLng(new LatLng(23.8143681,86.4412045));
-        CameraUpdate zoom=CameraUpdateFactory.zoomTo(14);
-        mMap.moveCamera(center);
-        mMap.animateCamera(zoom);
-    }
+
 }
 
