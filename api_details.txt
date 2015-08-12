@@ -10,3 +10,6 @@ complete bus route information of bus 'k'
 
 check for bus route updates of bus 'k'
 	http://shuttletracker.hostei.com/bus_route_update.php?bus=<k>
+
+send feedback 
+	shuttletracker.hostei.com/feedback?response=<feedback>
