@@ -1,6 +1,6 @@
 base url : http://shuttletracker.hostei.com
 latest coordinates of bus no. 'k'
-	http://shuttletracker.hostei.com/?latest=<k>
+	http://shuttletracker.hostei.com/?bus=<k>&latest=1
 
 push new coordinates for bus 'k'
 	http://shuttletracker.hostei.com/?bus=<k>&lat=<latitude>&long=<longitude>&speed=<speed>
