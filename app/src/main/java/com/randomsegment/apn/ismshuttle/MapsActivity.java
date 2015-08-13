@@ -1,6 +1,9 @@
 package com.randomsegment.apn.ismshuttle;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Handler;
@@ -8,10 +11,18 @@ import android.os.StrictMode;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.InputType;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.CameraUpdate;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -40,10 +51,40 @@ public class MapsActivity extends ActionBarActivity {
     private GoogleMap mMap;
     private boolean moreThanOne = false;
     public LatLng prev = new LatLng(0, 0);
-    public int DEFAULT_ZOOM_LEVEL = 18;
+    public LatLng default_location = new LatLng(23.815717,86.441069);
+    public int DEFAULT_ZOOM_LEVEL = 17;
     private Marker marker;
+
+    // Toast Variable
+    private Toast mToast;
+
+    // Navigation + Recycler View
+    //First We Declare Titles And Icons For Our Navigation Drawer List View
+    //This Icons And Titles Are holded in an Array as you can see
+
+    String TITLES[] = {"Route","Feedback","Setting","About"};
+    int ICONS[] = {R.drawable.route_icon,R.drawable.feedback_icon1,R.drawable.setting_icon,R.drawable.about_icon};
+
+    //Similarly we Create a String Resource for the name and email in the header view
+    //And we also create a int resource for profile picture in the header view
+
+
+
+    RecyclerView mRecyclerView;                           // Declaring RecyclerView
+    RecyclerView.Adapter mAdapter;                        // Declaring Adapter For Recycler View
+    RecyclerView.LayoutManager mLayoutManager;            // Declaring Layout Manager as a linear layout manager
+    DrawerLayout Drawer;                                  // Declaring DrawerLayout
+
+    ActionBarDrawerToggle mDrawerToggle;
+
+    //Navigation Drawer Variables
+    private AlertDialog.Builder dialogBuilder;
+    private String strRoute = "",strFeedback = "",strEmail = "";
+    int route = 0;
+
     Context context;
     private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,17 +93,106 @@ public class MapsActivity extends ActionBarActivity {
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        NavigationDrawerFragment navigationDrawerFragment =
-                (NavigationDrawerFragment)getSupportFragmentManager()
-                        .findFragmentById(R.id.fragment_navigation_drawer);
+        //NavigationDrawerFragment navigationDrawerFragment =
+        //        (NavigationDrawerFragment)getSupportFragmentManager()
+        //                .findFragmentById(R.id.fragment_navigation_drawer);
 
-        navigationDrawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
+        //navigationDrawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
+
+        //New
+
+
+        mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView); // Assigning the RecyclerView Object to the xml View
+
+        mRecyclerView.setHasFixedSize(true);                            // Letting the system know that the list objects are of fixed size
+
+        mAdapter = new MyAdapter(TITLES,ICONS,this);       // Creating the Adapter of MyAdapter class(which we are going to see in a bit)
+        // And passing the titles,icons,header view name, header view email,
+        // and header view profile picture
+
+        mRecyclerView.setAdapter(mAdapter);                              // Setting the adapter to RecyclerView
+
+        final GestureDetector mGestureDetector = new GestureDetector(MapsActivity.this, new GestureDetector.SimpleOnGestureListener() {
+
+            @Override public boolean onSingleTapUp(MotionEvent e) {
+                return true;
+            }
+
+        });
+
+        mRecyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
+            @Override
+            public boolean onInterceptTouchEvent(RecyclerView recyclerView, MotionEvent motionEvent) {
+                View child = recyclerView.findChildViewUnder(motionEvent.getX(),motionEvent.getY());
+
+
+
+                if(child!=null && mGestureDetector.onTouchEvent(motionEvent)){
+                    Drawer.closeDrawers();
+                    Toast.makeText(MapsActivity.this, "The Item Clicked is: " + recyclerView.getChildPosition(child), Toast.LENGTH_SHORT).show();
+                    if(recyclerView.getChildPosition(child) == 0)
+                        route_map();
+                    else if (recyclerView.getChildPosition(child) == 1)
+                        feedback();
+                    else if (recyclerView.getChildPosition(child) == 2)
+                        setting();
+                    else if (recyclerView.getChildPosition(child) == 3)
+                        about();
+                    return true;
+
+                }
+
+                return false;
+            }
+
+            @Override
+            public void onTouchEvent(RecyclerView recyclerView, MotionEvent motionEvent) {
+
+            }
+
+            @Override
+            public void onRequestDisallowInterceptTouchEvent(boolean b) {
+
+            }
+        });
+
+        mLayoutManager = new LinearLayoutManager(this);                 // Creating a layout Manager
+
+        mRecyclerView.setLayoutManager(mLayoutManager);                 // Setting the layout Manager
+
+
+        Drawer = (DrawerLayout) findViewById(R.id.drawer_layout);        // Drawer object Assigned to the view
+        mDrawerToggle = new ActionBarDrawerToggle(this,Drawer,toolbar,R.string.drawer_open,R.string.drawer_close){
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                // code here will execute once the drawer is opened( As I dont want anything happened whe drawer is
+                // open I am not going to put anything here)
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+                // Code here will execute once drawer is closed
+            }
+
+
+
+        };
+        // Drawer Toggle Object Made
+        Drawer.setDrawerListener(mDrawerToggle); // Drawer Listener set to the Drawer toggle
+        mDrawerToggle.syncState();               // Finally we set the drawer toggle sync State
+
+        // Map part
 
         createKML(context);
         setUpMapIfNeeded();
     }
+
+
 
     @Override
     protected void onResume() {
@@ -225,9 +355,9 @@ public class MapsActivity extends ActionBarActivity {
     }
     //@Override
     public void onMapReady() {
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(default_location, DEFAULT_ZOOM_LEVEL));
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        
         callAsynchronousTask();
     }
     public void callAsynchronousTask() {
@@ -252,5 +382,104 @@ public class MapsActivity extends ActionBarActivity {
         timer.schedule(doAsynchronousTask, 0, 2000); //execute in every 2000 ms
     }
 
+    // Navigation Drawer Part
+    // Route
+    /*
+    public void route_map(Context mcontext){
+        dialogBuilder = new AlertDialog.Builder(context);
+        final String[] strrouteType = {"Route 1"};
+
+        dialogBuilder.setTitle("Route");
+        dialogBuilder.setSingleChoiceItems(strrouteType,-1,new DialogInterface.OnClickListener()
+        {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                strRoute = strrouteType[which];
+                dialog.dismiss();
+                if (strRoute == "Route 1")
+
+
+            }
+        });
+        AlertDialog dialogRemark = dialogBuilder.create();
+        dialogRemark.show();
+
+    }*/
+    private void route_map() {
+        new MaterialDialog.Builder(this)
+                .title(R.string.route)
+                .items(R.array.no_of_route)
+                .itemsCallbackSingleChoice(route, new MaterialDialog.ListCallbackSingleChoice() {
+                    @Override
+                    public boolean onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                        showToast(which + ": " + text);
+                        route = which;
+                        if (route == 0)
+                            createKML(context);
+                        return true; // allow selection
+                    }
+                })
+                .positiveText(R.string.choose)
+                .show();
+    }
+    // Feedback
+    /*
+    public void feedback(Context mContext){
+        dialogBuilder = new AlertDialog.Builder(mContext);
+        final EditText txtFeedback = new EditText(mContext);
+        dialogBuilder.setTitle("Feedback");
+        dialogBuilder.setMessage("Message");
+        dialogBuilder.setView(txtFeedback);
+        dialogBuilder.setPositiveButton("SEND FEEDBACK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                strFeedback += txtFeedback.getText().toString();
+            }
+        });
+        dialogBuilder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //
+            }
+        });
+        AlertDialog dialogRemark = dialogBuilder.create();
+        dialogRemark.show();
+    }*/
+    private void feedback() {
+        new MaterialDialog.Builder(this)
+                .title(R.string.feedback)
+                .content(R.string.textfeedback)
+                .inputType(InputType.TYPE_CLASS_TEXT |
+                        InputType.TYPE_TEXT_VARIATION_PERSON_NAME |
+                        InputType.TYPE_TEXT_FLAG_CAP_WORDS)
+                .positiveText(R.string.send)
+                .input(R.string.input_hint, R.string.null_entry, false, new MaterialDialog.InputCallback() {
+                    @Override
+                    public void onInput(MaterialDialog dialog, CharSequence input) {
+                        showToast("Hello, " + input.toString() + "!");
+                    }
+                }).show();
+    }
+    // Setting
+    public void setting(){
+        Intent myIntent = new Intent(MapsActivity.this, Setting.class);
+        MapsActivity.this.startActivity(myIntent);
+    }
+    // About
+    public void about(){
+        Intent myIntent = new Intent(MapsActivity.this, About.class);
+        MapsActivity.this.startActivity(myIntent);
+    }
+
+    // Toast
+    private void showToast(String message) {
+        if (mToast != null) {
+            mToast.cancel();
+            mToast = null;
+        }
+        mToast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+        mToast.show();
+    }
 }
 

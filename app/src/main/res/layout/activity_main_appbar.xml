@@ -28,14 +28,17 @@
                 />
         </RelativeLayout>
 
-        <fragment
-            android:id="@+id/fragment_navigation_drawer"
-            android:name="com.randomsegment.apn.ismshuttle.NavigationDrawerFragment"
-            android:layout_width="280dp"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/RecyclerView"
+            android:elevation="10dp"
+            android:layout_width="320dp"
             android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:layout="@layout/fragment_navigation_drawer"
-            tools:layout="@layout/fragment_navigation_drawer" />
+            android:layout_gravity="left"
+            android:background="#FFFFFF"
+            app:theme="@style/MyCustomToolBarTheme"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
     </android.support.v4.widget.DrawerLayout>
 
 

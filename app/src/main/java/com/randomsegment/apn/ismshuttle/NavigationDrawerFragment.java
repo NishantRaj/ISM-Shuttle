@@ -8,10 +8,15 @@ import android.support.annotation.Nullable;
 import  android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -27,7 +32,6 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mUserLearnedDrawer;
     private boolean mFromSavedInstanceState;
     private View containerView;
-
     public NavigationDrawerFragment() {
         // Required empty public constructor
     }
@@ -40,7 +44,6 @@ public class NavigationDrawerFragment extends Fragment {
             mFromSavedInstanceState=true;
         }
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -76,7 +79,6 @@ public class NavigationDrawerFragment extends Fragment {
                     toolbar.setAlpha(1-slideOffset);
                 }
             }
-
         };
 
         if (!mUserLearnedDrawer && !mFromSavedInstanceState){
