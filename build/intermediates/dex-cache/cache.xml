@@ -2,46 +2,32 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\22.2.1\jars\classes.jar"
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0 rc3"
-        sha1="1e47268e271ff279aca3dfdd62587b8c90b6da14">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-248584bb7886518d9a02933a9bc8221e3f705917.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-38c4d9d154d9c2f5dbd7be6f0fb4cb48142be8c6.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-ba2d1c714b36273cd882b2764c0b4cb14609480d.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-58a017a18736643ca9037b9551861440c860ff74.jar" />
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-3380a40e340ad89afd0a9ca25c579f3aa3d7fada.jar" />
     </item>
     <item
         jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.5.0\jars\classes.jar"
         jumboMode="false"
-        revision="23.0.0 rc3"
+        revision="22.0.1"
         sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
         <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-05b4d5ad8d8daa599e34f03522a8f3ff9431c960.jar" />
     </item>
     <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.5.0\jars\classes.jar"
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
         jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-d1bd12fbbc7ffd5f0baa706217cc9f0186c11e44.jar" />
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-eaf576445a3837c71f2ebccc432b486ff7dc044a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-25403bde599155511c448cf3cb079b39590f77cf.jar" />
     </item>
     <item
         jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\classes.jar"
@@ -51,39 +37,11 @@
         <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-407326693d68d8585aaed705acc8c23649dfa527.jar" />
     </item>
     <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0 rc3"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-14d781db97ef76d956f380f878b9b4e8a21d37bc.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="4b1a7fac58cc85b115adee653a10b6300f90951a">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-efc929549bd3092cd7c98fa50d70672b998465ae.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-49b37512950afe2a4627e2016b8a390597b52542.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-3380a40e340ad89afd0a9ca25c579f3aa3d7fada.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.7.8.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="332c3fb3a17fa7a66f84c701047aac964653fdf6">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-7de0912d6c914a56f209bdc241965269cd9212a7.jar" />
+        sha1="1e47268e271ff279aca3dfdd62587b8c90b6da14">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-248584bb7886518d9a02933a9bc8221e3f705917.jar" />
     </item>
     <item
         jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.5.0\jars\classes.jar"
@@ -93,25 +51,18 @@
         <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-b4ff6112d848aa3c36e28e099412034dfd70643e.jar" />
     </item>
     <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\jars\classes.jar"
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0 rc3"
-        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-6dc8ec620b4d44fa7546ddd68a98e838e49b6e13.jar" />
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-49dd9f0c2a43f32879374da13637676f47c32d4d.jar" />
     </item>
     <item
-        jar="C:\Users\Rishabh\AppData\Local\Android\sdk2\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
         jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-0e25a46825db6e29ad98cc584c17f16a7f69f335.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-efc599f6ef4f4f3277f756f736247ed90faf1940.jar" />
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-14d781db97ef76d956f380f878b9b4e8a21d37bc.jar" />
     </item>
     <item
         jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\libs\internal_impl-22.0.0.jar"
@@ -123,58 +74,58 @@
     <item
         jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.5.0\jars\classes.jar"
         jumboMode="false"
-        revision="23.0.0 rc3"
+        revision="22.0.1"
         sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
         <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-beec4d2264b38ca43fd453d3feda90b7dde30f8d.jar" />
     </item>
     <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="a78183f30e769a98ab4820794f597763088d3065">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-916db079400c088232d8b512593557393c5ad577.jar" />
-    </item>
-    <item
         jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.5.0\jars\classes.jar"
         jumboMode="false"
-        revision="23.0.0 rc3"
+        revision="22.0.1"
         sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
         <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-4b850a72f8a23dbfeeea34ce6e03f5a286f6dcab.jar" />
     </item>
     <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.5.0\jars\classes.jar"
+        jar="C:\Users\Rishabh\AppData\Local\Android\sdk2\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
         jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-550b4f8fc4c4a056d5603377244e6b56ae59bff7.jar" />
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-0e25a46825db6e29ad98cc584c17f16a7f69f335.jar" />
     </item>
     <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.5.0\jars\classes.jar"
         jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-eaf576445a3837c71f2ebccc432b486ff7dc044a.jar" />
+        revision="22.0.1"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-1dd04d1018fd91d100603e26d296ba2b047c1027.jar" />
     </item>
     <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.5.0\jars\classes.jar"
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0 rc3"
-        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-326d7278f0e7ff21d050b17a0471b3d6c636b3f5.jar" />
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-ba2d1c714b36273cd882b2764c0b4cb14609480d.jar" />
     </item>
     <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0 rc3"
-        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-f8a0f2c89466d9ba6ed0d2194987f893ef2c49a1.jar" />
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-d1bd12fbbc7ffd5f0baa706217cc9f0186c11e44.jar" />
     </item>
     <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.5.0\jars\classes.jar"
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.5.0\jars\classes.jar"
         jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="d405025c600055237c171a0bbabaa49d69696573">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-8a1b7ca656235cd6fb724662047b5884b5699f4b.jar" />
+        revision="22.0.1"
+        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-b4ff6112d848aa3c36e28e099412034dfd70643e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-557e030895c21c4b5e53c469d7219ea63add1e4e.jar" />
     </item>
     <item
         jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.5.0\jars\classes.jar"
@@ -184,6 +135,27 @@
         <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-b77ccc81de90c404e92c34d0524f5ecb2710457b.jar" />
     </item>
     <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-2d6182787dd73c6c4d47604597774b52a30f11e0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-f8a0f2c89466d9ba6ed0d2194987f893ef2c49a1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-58a017a18736643ca9037b9551861440c860ff74.jar" />
+    </item>
+    <item
         jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0 rc3"
@@ -191,11 +163,18 @@
         <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-1dd04d1018fd91d100603e26d296ba2b047c1027.jar" />
     </item>
     <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\jars\classes.jar"
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0 rc3"
-        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
-        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-49dd9f0c2a43f32879374da13637676f47c32d4d.jar" />
+        sha1="4b1a7fac58cc85b115adee653a10b6300f90951a">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-efc929549bd3092cd7c98fa50d70672b998465ae.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-eaf576445a3837c71f2ebccc432b486ff7dc044a.jar" />
     </item>
     <item
         jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.5.0\jars\classes.jar"
@@ -205,11 +184,242 @@
         <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-25403bde599155511c448cf3cb079b39590f77cf.jar" />
     </item>
     <item
-        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.5.0\jars\classes.jar"
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-49b37512950afe2a4627e2016b8a390597b52542.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0 rc3"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-6dc8ec620b4d44fa7546ddd68a98e838e49b6e13.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-58a017a18736643ca9037b9551861440c860ff74.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-6dc8ec620b4d44fa7546ddd68a98e838e49b6e13.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.7.8.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="332c3fb3a17fa7a66f84c701047aac964653fdf6">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-7de0912d6c914a56f209bdc241965269cd9212a7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-550b4f8fc4c4a056d5603377244e6b56ae59bff7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1e47268e271ff279aca3dfdd62587b8c90b6da14">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-248584bb7886518d9a02933a9bc8221e3f705917.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-916db079400c088232d8b512593557393c5ad577.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-326d7278f0e7ff21d050b17a0471b3d6c636b3f5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4b1a7fac58cc85b115adee653a10b6300f90951a">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-efc929549bd3092cd7c98fa50d70672b998465ae.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-916db079400c088232d8b512593557393c5ad577.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\AppData\Local\Android\sdk2\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-0e25a46825db6e29ad98cc584c17f16a7f69f335.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-49b37512950afe2a4627e2016b8a390597b52542.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-b77ccc81de90c404e92c34d0524f5ecb2710457b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-4b850a72f8a23dbfeeea34ce6e03f5a286f6dcab.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-3380a40e340ad89afd0a9ca25c579f3aa3d7fada.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-38c4d9d154d9c2f5dbd7be6f0fb4cb48142be8c6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-efc599f6ef4f4f3277f756f736247ed90faf1940.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-38c4d9d154d9c2f5dbd7be6f0fb4cb48142be8c6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-14d781db97ef76d956f380f878b9b4e8a21d37bc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-ba2d1c714b36273cd882b2764c0b4cb14609480d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-efc599f6ef4f4f3277f756f736247ed90faf1940.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-beec4d2264b38ca43fd453d3feda90b7dde30f8d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-05b4d5ad8d8daa599e34f03522a8f3ff9431c960.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-550b4f8fc4c4a056d5603377244e6b56ae59bff7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.7.8.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="332c3fb3a17fa7a66f84c701047aac964653fdf6">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-7de0912d6c914a56f209bdc241965269cd9212a7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-8a1b7ca656235cd6fb724662047b5884b5699f4b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-49dd9f0c2a43f32879374da13637676f47c32d4d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-f8a0f2c89466d9ba6ed0d2194987f893ef2c49a1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-326d7278f0e7ff21d050b17a0471b3d6c636b3f5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-407326693d68d8585aaed705acc8c23649dfa527.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
         sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
         <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-2d6182787dd73c6c4d47604597774b52a30f11e0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-8a1b7ca656235cd6fb724662047b5884b5699f4b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="C:\Users\Rishabh\.AndroidStudioBeta\ISM-Shuttle\app\build\intermediates\pre-dexed\debug\classes-d1bd12fbbc7ffd5f0baa706217cc9f0186c11e44.jar" />
     </item>
 
 </items>
