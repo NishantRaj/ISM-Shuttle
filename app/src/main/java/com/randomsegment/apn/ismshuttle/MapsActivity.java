@@ -30,21 +30,16 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.kml.KmlLayer;
-import com.google.android.gms.maps.model.Polyline;
-import com.google.android.gms.maps.model.PolylineOptions;
 
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.BasicResponseHandler;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
 import org.json.JSONObject;
 
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 import java.util.*;
 
 public class MapsActivity extends ActionBarActivity {
@@ -52,8 +47,10 @@ public class MapsActivity extends ActionBarActivity {
     private boolean moreThanOne = false;
     public LatLng prev = new LatLng(0, 0);
     public LatLng default_location = new LatLng(23.815717,86.441069);
-    public int DEFAULT_ZOOM_LEVEL = 17;
+    public int DEFAULT_ZOOM_LEVEL = 16;
+    private boolean checkCancelAsyncTask = false;
     private Marker marker;
+    private getMapData task;
 
     // Toast Variable
     private Toast mToast;
@@ -197,20 +194,27 @@ public class MapsActivity extends ActionBarActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        checkCancelAsyncTask = false;
         setUpMapIfNeeded();
     }
     @Override
     protected void onStop(){
+        task.cancel(true);
+        checkCancelAsyncTask = true;
         super.onStop();
     }
 
     @Override
     protected void onDestroy() {
+        task.cancel(true);
+        checkCancelAsyncTask = true;
         super.onDestroy();
     }
 
     @Override
     protected void onPause() {
+        task.cancel(true);
+        checkCancelAsyncTask = true;
         super.onPause();
     }
 
@@ -276,47 +280,45 @@ public class MapsActivity extends ActionBarActivity {
         return (double) a + frac;
     }
     private class getMapData extends AsyncTask<Void, Void, String>{
-        private HttpParams httpParams;
-        private HttpClient httpclient;
-        private HttpPost httppost;
-        private int TIMEOUT_MILLISEC = 10000;
-        private String url;
         private Context m;
-        private ResponseHandler<String> responseHandler;
+        private URL url;
         public getMapData(Context c){
             m = c;
         }
         @Override
+        protected void onCancelled(){
+            checkCancelAsyncTask = true;
+            //Toast.makeText(m, "cancelling task", Toast.LENGTH_LONG).show();
+        }
+        @Override
         protected void onPreExecute(){
-            httpParams = new BasicHttpParams();
-            HttpConnectionParams.setConnectionTimeout(httpParams, TIMEOUT_MILLISEC);
-            HttpConnectionParams.setSoTimeout(httpParams, TIMEOUT_MILLISEC);
-            httpclient = new DefaultHttpClient(httpParams);
-            url = new String("http://shuttletracker.hostei.com/?bus=1&latest=1");
-            //Toast.makeText(m, "abc", Toast.LENGTH_LONG).show();
+            try {
+                url = new URL("http://shuttletracker.zz.mu/?bus=1&latest=1");
+            }catch (Exception e){
+                Toast.makeText(m, "invalid URL", Toast.LENGTH_LONG).show();
+            }
         }
         @Override
         protected String doInBackground(Void... params){
-            httppost = new HttpPost(url);
-            responseHandler = new BasicResponseHandler();
             String lat = new String();
             String lng = new String();
             try {
-                String responseBody = httpclient.execute(httppost, responseHandler);
+                URLConnection uc = url.openConnection();
+                uc.setConnectTimeout(3000);
+                BufferedReader br = new BufferedReader(new InputStreamReader(uc.getInputStream()));
+                String responseBody = br.readLine();
                 JSONObject json = new JSONObject(responseBody);
                 lat = json.getString("latitude");
                 lng = json.getString("longitude");
-                //Log.d("data",lat + " " + lng);
-            }catch (ClientProtocolException e){
-                e.printStackTrace();
-            }
-            catch(Exception e){
+            } catch (Exception e) {
+                Toast.makeText(m, "Connection Error", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
             return lat+" "+lng;
         }
         //@Override
         protected void onPostExecute(String result){
+            if (result == null) return ;
             Calendar c = Calendar.getInstance();
             int seconds = c.get(Calendar.SECOND);
             if (result.length() >= 8) {
@@ -326,8 +328,8 @@ public class MapsActivity extends ActionBarActivity {
                     Double lng = Double.parseDouble(coords[1]);
                     LatLng myLoc = new LatLng(coordinates(lat / 100.0), coordinates(lng / 100.0));
                     float curZoom = mMap.getCameraPosition().zoom;
-                    //mMap.clear();
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myLoc, Math.max(DEFAULT_ZOOM_LEVEL, curZoom)));
+
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myLoc, curZoom));
                     mMap.getUiSettings().setZoomControlsEnabled(true);
                     mMap.getUiSettings().setMapToolbarEnabled(false);
                     if (!moreThanOne){
@@ -338,19 +340,15 @@ public class MapsActivity extends ActionBarActivity {
                                 .snippet("Indian School Of Mines.")
                                 .position(myLoc));
                         marker.setVisible(true);
-                        //Toast.makeText(m, "more than one done " + Double.toString(prev.latitude), Toast.LENGTH_LONG).show();
-                    }
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myLoc, DEFAULT_ZOOM_LEVEL));
+                        }
                     else{
                         marker.setPosition(myLoc);
-                        //Toast.makeText(m, Double.toString(myLoc.latitude) +" "+ Double.toString(myLoc.longitude) + " " + Double.toString(prev.latitude), Toast.LENGTH_LONG).show();
-                        Polyline line = mMap.addPolyline(new PolylineOptions()
-                        .add(prev, myLoc).width(5).color(Color.RED));
-                        prev = myLoc;
                     }
 
                 }
             }
-            Toast.makeText(m, result + "->" + Integer.toString(seconds), Toast.LENGTH_LONG).show();
+            Toast.makeText(m, result + "->" + Integer.toString(seconds) , Toast.LENGTH_LONG).show();
         }
     }
     //@Override
@@ -368,10 +366,12 @@ public class MapsActivity extends ActionBarActivity {
             public void run() {
                 handler.post(new Runnable() {
                     public void run() {
-                        try {
-                            getMapData task = new getMapData(MapsActivity.this.context);
-                            // PerformBackgroundTask this class is the class that extends AsynchTask
-                            task.execute();
+                        try{
+                            if (!checkCancelAsyncTask) {
+                                task = new getMapData(MapsActivity.this.context);
+                                // PerformBackgroundTask this class is the class that extends AsynchTask
+                                task.execute();
+                            }
                         } catch (Exception e) {
                             // TODO Auto-generated catch block
                         }
@@ -458,6 +458,14 @@ public class MapsActivity extends ActionBarActivity {
                     @Override
                     public void onInput(MaterialDialog dialog, CharSequence input) {
                         showToast("Hello, " + input.toString() + "!");
+                        try {
+                            String urlResponse = "http://shuttletracker.hostei.com/feedback.php?response=";
+                            urlResponse += URLEncoder.encode(input.toString());
+                            URL url = new URL(urlResponse);
+                            BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
+                        } catch (Exception E) {
+                            showToast("Error in sending the feedback");
+                        }
                     }
                 }).show();
     }
