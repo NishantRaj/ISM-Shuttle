@@ -28,11 +28,7 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Setting"
@@ -47,6 +43,15 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MapsActivity" />
+        </activity>
+        <activity
+            android:name=".Sp"
+            android:label="ISM Shuttle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

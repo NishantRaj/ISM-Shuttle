@@ -20,6 +20,7 @@
     <string name="send">SEND FEEDBACK</string>
     <string name="input_hint">Message</string>
     <string name="textfeedback">Give your review</string>
-    <string name="null_entry" />
+    <string name="null_entry"></string>
+    <string name="title_activity_sp">Sp</string>
 
 </resources>
