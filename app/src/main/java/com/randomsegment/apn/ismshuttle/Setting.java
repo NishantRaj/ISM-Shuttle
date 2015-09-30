@@ -1,5 +1,7 @@
 package com.randomsegment.apn.ismshuttle;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -10,6 +12,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,6 +31,8 @@ public class Setting extends AppCompatActivity implements
         int refresh_time = 0;
         private Toast mToast;
         private Thread mThread;
+        int ref_time = 2000;
+        Context context;
 
     private void showToast(String message) {
         if (mToast != null) {
@@ -54,6 +59,7 @@ public class Setting extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
+        context = this;
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
@@ -77,6 +83,7 @@ public class Setting extends AppCompatActivity implements
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         refresh_time = preferences.getInt("Refresh",refresh_time);
+        ref_time = preferences.getInt("refreshTime",ref_time);
 
         findViewById(R.id.refresh_time).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,8 +91,6 @@ public class Setting extends AppCompatActivity implements
                 showSingleChoice();
             }
         });
-
-
     }
 
     @Override
@@ -114,7 +119,12 @@ public class Setting extends AppCompatActivity implements
             return true;
         }
         if (id == R.id.home) {
-            NavUtils.navigateUpFromSameTask(this);
+            //NavUtils.navigateUpFromSameTask(this);
+            //change
+            Intent i = new Intent(this,MapsActivity.class);
+            i.putExtra("refreshTime", ref_time);
+            Toast.makeText(this,""+ref_time,Toast.LENGTH_SHORT).show();
+            startActivity(i);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -150,16 +160,56 @@ public class Setting extends AppCompatActivity implements
                     public boolean onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
                         showToast(which + ": " + text);
                         refresh_time = which;
+
+                        // Modify
+                        if (refresh_time == 0)
+                        {
+                            ref_time = 2000;
+                        }
+                        else if (refresh_time == 1)
+                        {
+                            ref_time = 5000;
+                        }
+                        else
+                            ref_time = 10000;
+                        Log.d("R","ref_time = "+ref_time);
+                        Log.d("R", "refresh_time = " + ref_time);
+
+                        // Store
+                        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putInt("Refresh",refresh_time);
+                        editor.putInt("refreshTime",ref_time);
+                        editor.apply();
+
+
+                        // Modify
+
                         return true; // allow selection
                     }
                 })
                 .positiveText(R.string.choose)
                 .show();
+    /*
+        if (refresh_time == 0)
+        {
+            ref_time = 2000;
+        }
+        else if (refresh_time == 1)
+        {
+            ref_time = 5000;
+        }
+        else
+            ref_time = 10000;
+        Log.d("R","ref_time = "+ref_time);
+        Log.d("R", "refresh_time = " + ref_time);
         // Store
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putInt("Refresh",refresh_time);
+        editor.putInt("refreshTime",ref_time);
         editor.apply();
+        */
     }
 
     @Override

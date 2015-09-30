@@ -4,11 +4,13 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -26,6 +28,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -43,6 +46,7 @@ import java.net.URLEncoder;
 import java.util.*;
 
 public class MapsActivity extends ActionBarActivity {
+
     private GoogleMap mMap;
     private boolean moreThanOne = false;
     public LatLng prev = new LatLng(0, 0);
@@ -51,14 +55,14 @@ public class MapsActivity extends ActionBarActivity {
     private boolean checkCancelAsyncTask = false;
     private Marker marker;
     private getMapData task;
-
+    private final int DEFAULT_REFRESH_TIME = 2000;
     // Toast Variable
+
     private Toast mToast;
 
     // Navigation + Recycler View
     //First We Declare Titles And Icons For Our Navigation Drawer List View
     //This Icons And Titles Are holded in an Array as you can see
-
     String TITLES[] = {"Route","Feedback","Setting","About"};
     int ICONS[] = {R.drawable.route_icon,R.drawable.feedback_icon1,R.drawable.setting_icon,R.drawable.about_icon};
 
@@ -78,7 +82,7 @@ public class MapsActivity extends ActionBarActivity {
     private AlertDialog.Builder dialogBuilder;
     private String strRoute = "",strFeedback = "",strEmail = "";
     int route = 0;
-
+    int ref_time = 2000;
     Context context;
     private Toolbar toolbar;
 
@@ -155,6 +159,11 @@ public class MapsActivity extends ActionBarActivity {
             }
         });
 
+        // Save the refresh time
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        ref_time = preferences.getInt("refreshTime",ref_time);
+
+        // Layout Manager
         mLayoutManager = new LinearLayoutManager(this);                 // Creating a layout Manager
 
         mRecyclerView.setLayoutManager(mLayoutManager);                 // Setting the layout Manager
@@ -187,6 +196,18 @@ public class MapsActivity extends ActionBarActivity {
 
         createKML(context);
         setUpMapIfNeeded();
+
+        //Modify
+        ref_time = getIntent().getIntExtra("refreshTime", DEFAULT_REFRESH_TIME);
+        // Store
+        //throw new RuntimeException(String.valueOf(ref_time));
+        //SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt("refreshTime",ref_time);
+        editor.apply();
+
+
+        //Modify
     }
 
 
@@ -199,21 +220,24 @@ public class MapsActivity extends ActionBarActivity {
     }
     @Override
     protected void onStop(){
-        task.cancel(true);
+        if (task != null)
+            task.cancel(true);
         checkCancelAsyncTask = true;
         super.onStop();
     }
 
     @Override
     protected void onDestroy() {
-        task.cancel(true);
+        if (task != null)
+            task.cancel(true);
         checkCancelAsyncTask = true;
         super.onDestroy();
     }
 
     @Override
     protected void onPause() {
-        task.cancel(true);
+        if (task != null)
+            task.cancel(true);
         checkCancelAsyncTask = true;
         super.onPause();
     }
@@ -311,14 +335,18 @@ public class MapsActivity extends ActionBarActivity {
                 lat = json.getString("latitude");
                 lng = json.getString("longitude");
             } catch (Exception e) {
-                Toast.makeText(m, "Connection Error", Toast.LENGTH_LONG).show();
-                e.printStackTrace();
+                return "";
+                //Toast.makeText(m, "Connection Error", Toast.LENGTH_LONG).show();
+                //e.printStackTrace();
             }
             return lat+" "+lng;
         }
         //@Override
         protected void onPostExecute(String result){
-            if (result == null) return ;
+            if (result == ""){
+                Toast.makeText(m, "Internet Connection Problem", Toast.LENGTH_LONG).show();
+                return ;
+            }
             Calendar c = Calendar.getInstance();
             int seconds = c.get(Calendar.SECOND);
             if (result.length() >= 8) {
@@ -338,6 +366,7 @@ public class MapsActivity extends ActionBarActivity {
                         marker = mMap.addMarker(new MarkerOptions()
                                 .title("ISM")
                                 .snippet("Indian School Of Mines.")
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_marker))
                                 .position(myLoc));
                         marker.setVisible(true);
                         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myLoc, DEFAULT_ZOOM_LEVEL));
@@ -348,7 +377,15 @@ public class MapsActivity extends ActionBarActivity {
 
                 }
             }
-            Toast.makeText(m, result + "->" + Integer.toString(seconds) , Toast.LENGTH_LONG).show();
+            final Toast t = Toast.makeText(m, result + "->" + Integer.toString(seconds) , Toast.LENGTH_SHORT);
+            t.show();
+            Handler h = new Handler();
+            h.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    t.cancel();
+                }
+            },750);
         }
     }
     //@Override
@@ -379,7 +416,11 @@ public class MapsActivity extends ActionBarActivity {
                 });
             }
         };
-        timer.schedule(doAsynchronousTask, 0, 2000); //execute in every 2000 ms
+
+        // New one
+        timer.schedule(doAsynchronousTask, 0, ref_time); //execute in every 2000 ms
+
+        //timer.schedule(doAsynchronousTask, 0, 2000); //execute in every 2000 ms
     }
 
     // Navigation Drawer Part
@@ -388,7 +429,6 @@ public class MapsActivity extends ActionBarActivity {
     public void route_map(Context mcontext){
         dialogBuilder = new AlertDialog.Builder(context);
         final String[] strrouteType = {"Route 1"};
-
         dialogBuilder.setTitle("Route");
         dialogBuilder.setSingleChoiceItems(strrouteType,-1,new DialogInterface.OnClickListener()
         {
@@ -490,4 +530,3 @@ public class MapsActivity extends ActionBarActivity {
         mToast.show();
     }
 }
-
