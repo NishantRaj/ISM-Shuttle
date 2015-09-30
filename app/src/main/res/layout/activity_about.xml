@@ -19,72 +19,179 @@
             android:layout_below="@+id/app_bar"
             android:padding="16dp">
 
-            <TextView
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/Nishant"
+                android:padding="10dp"
+                android:background="@drawable/button_round_rect_shape"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_nishant"/>
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name_Nishant_Raj"
+                        android:text="Nishant Raj"
+                        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/working_Nishant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CSE, ISM Dhanbad"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+
+                </LinearLayout>
+                </LinearLayout>
+
+
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/name_Nishant_Raj"
-                android:text="Nishant Raj"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-            <TextView
-                android:id="@+id/working_Nishant"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/name_Nishant_Raj"
-                android:text="CSE, ISM Dhanbad"
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-            <TextView
+                android:id="@+id/Prateek"
+                android:padding="10dp"
+                android:background="@drawable/button_round_rect_shape"
                 android:layout_marginTop="16dp"
+                android:layout_below="@+id/Nishant"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_prateek"/>
+
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name_Prateek_Nishchal"
+                        android:text="Prateek Nischal"
+                        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                    <TextView
+                        android:id="@+id/working_Prateek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="EE, ISM Dhanbad"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+
+
+                </LinearLayout>
+
+
+                </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/working_Nishant"
-                android:id="@+id/name_Prateek_Nishchal"
-                android:text="Prateek Nischal"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-            <TextView
-                android:id="@+id/working_Prateek"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/name_Prateek_Nishchal"
-                android:text="EE, ISM Dhanbad"
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-            <TextView
+                android:id="@+id/Anant"
+                android:padding="10dp"
+                android:background="@drawable/button_round_rect_shape"
                 android:layout_marginTop="16dp"
+                android:layout_below="@+id/Prateek"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_anant"/>
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/name_Anant_Kumar"
+                        android:text="Anant Kumar"
+                        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+
+                    <TextView
+                        android:id="@+id/working_Anant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="CSE, ISM Dhanbad"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/working_Prateek"
-                android:id="@+id/name_Anant_Kumar"
-                android:text="Anant Kumar"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-            <TextView
-                android:id="@+id/working_Anant"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/name_Anant_Kumar"
-                android:text="CSE, ISM Dhanbad"
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-            <TextView
+                android:id="@+id/Rishabh"
+                android:padding="10dp"
+                android:background="@drawable/button_round_rect_shape"
                 android:layout_marginTop="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/working_Anant"
-                android:id="@+id/name_Rishabh_Kumar"
-                android:text="Rishabh Kumar"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>
+                android:orientation="horizontal"
+                android:layout_below="@+id/Anant">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_rishabh"/>
 
 
-            <TextView
-                android:id="@+id/working_Rishabh"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/name_Rishabh_Kumar"
-                android:text="CSE, ISM Dhanbad"
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name_Rishabh_Kumar"
+                        android:text="Rishabh Kumar"
+                        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                    <TextView
+                        android:id="@+id/working_Rishabh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CSE, ISM Dhanbad"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
 
             </RelativeLayout>
     </RelativeLayout>
