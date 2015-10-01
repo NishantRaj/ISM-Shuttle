@@ -21,6 +21,8 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.ThemeSingleton;
 import com.afollestad.materialdialogs.util.DialogUtils;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.io.File;
 
@@ -54,6 +56,7 @@ public class Setting extends AppCompatActivity implements
         showToast(getString(message));
     }
 
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +94,11 @@ public class Setting extends AppCompatActivity implements
                 showSingleChoice();
             }
         });
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        mAdView.setAdListener(new ToastAdListener(this));
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     @Override

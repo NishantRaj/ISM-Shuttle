@@ -25,6 +25,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -59,6 +61,10 @@ public class MapsActivity extends ActionBarActivity {
     // Toast Variable
 
     private Toast mToast;
+
+    // Google Ad
+    private AdView mAdView;
+
 
     // Navigation + Recycler View
     //First We Declare Titles And Icons For Our Navigation Drawer List View
@@ -159,6 +165,13 @@ public class MapsActivity extends ActionBarActivity {
             }
         });
 
+        //Google Ads
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        mAdView.setAdListener(new ToastAdListener(this));
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         // Save the refresh time
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         ref_time = preferences.getInt("refreshTime",ref_time);
@@ -208,6 +221,9 @@ public class MapsActivity extends ActionBarActivity {
 
 
         //Modify
+
+
+
     }
 
 
@@ -215,6 +231,9 @@ public class MapsActivity extends ActionBarActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
         checkCancelAsyncTask = false;
         setUpMapIfNeeded();
     }
@@ -228,6 +247,9 @@ public class MapsActivity extends ActionBarActivity {
 
     @Override
     protected void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
         if (task != null)
             task.cancel(true);
         checkCancelAsyncTask = true;
@@ -236,6 +258,9 @@ public class MapsActivity extends ActionBarActivity {
 
     @Override
     protected void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
         if (task != null)
             task.cancel(true);
         checkCancelAsyncTask = true;
