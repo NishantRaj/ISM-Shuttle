@@ -8,7 +8,7 @@ Time :- 03 August 2015 (Monday) 02:00
 ===================================================*/
 /*Following given code work for Arduino UNO with GSM900 and GPS bee module and code was compiled in arduino 1.6.1*/
 #include <SoftwareSerial.h>
-SoftwareSerial gprsSerial(2, 3);
+SoftwareSerial gprsSerial(2, 3);                // RX , TX
 int Gpsdata;                                    // for incoming serial data 
 unsigned int finish =0;                         // indicate end of message
 unsigned int pos_cnt=0;                         // position counter
